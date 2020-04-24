@@ -1,7 +1,7 @@
 function merge(left, right) {
   const results = [];
   while(left.length && right.length){
-    if (left[0] && rigth[0]){
+    if (left[0] && right[0]){
       results.push(left.shift());
     } else {
       results.push(right.shift());
@@ -11,7 +11,7 @@ function merge(left, right) {
 }
 
 function mergeSort(arr){
-  if(arra.length === 1) {
+  if(arr.length === 1) {
     return arr;
   }
   const center = Math.floor(arr.length/2);
@@ -21,7 +21,8 @@ function mergeSort(arr){
   return merge(mergeSort(left), mergeSort(right));
 }
 
-var arrray1 = [-2,-222,-22222,2,0,-1,100,200,300];
+let array1 = [-2,-222,-22222,2,0,-1,100,200,300];
+let sorted = mergeSort(array1);
 
-console.log(mergeSort(array1));
+console.log(sorted);
 
